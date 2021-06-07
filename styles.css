@@ -1,0 +1,256 @@
+:root {
+    --dark: #1B2631;
+    --green: #6B8E23;
+    --pinky: #FFB6C1;
+    --brown: #CD853F;
+    --sky: #AFEEEE;
+    --blanco: #FFF;
+
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    counter-reset: score;
+}
+.phone {
+    position: relative;
+    border: 1rem solid;
+    border-radius: 40px;
+    border-color: var(--dark);
+    width: 375px;
+    height: 575px;
+    background-color: var(--sky);
+    box-shadow: 0 19px 38px rgb(0, 0, 0,0.30), 
+                0 15px 12px rgb(0, 0, 0,0.22);
+}
+
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+h2 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+
+.bunny {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    border-radius: 50px;
+    animation-name: conejito;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes conejito {
+    0% {
+        bottom: 0;
+    }
+    25% {
+        bottom: -60px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+.b_pri {
+    right: 60px;
+    height: 480px;
+    z-index: 1;
+    animation-duration: 1s;
+}
+
+.b_seg {
+    z-index: 2;
+    height: 480px;
+    left: 60px;
+    animation-duration: 1.5s;
+}
+
+.b_ter {
+    z-index: 4;
+    height: 390px;
+    left: 25px;
+    animation-duration: 750ms;
+}
+.b_cua {
+    z-index: 6;
+    height: 240px;
+    right: 50px;
+    animation-duration: 1.5s;
+}
+
+.b_qui {
+    z-index: 7;
+    height: 170px;
+    left: 30px;
+    animation-duration: 500ms;
+}
+
+
+.bunny_oreja {
+    background-color: var(--blanco);
+    border-radius: 90%;
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    z-index: 3;
+}
+.o_izq {
+    left: 15px;
+}
+
+.o_der {
+    right: 15px;
+}
+
+.bunny_oreja_inner {
+    background-color: var(--pinky);
+    z-index: 3;
+    position: absolute;
+    border-radius: 90%;
+    top: 5px;
+    width: 10px;
+    height: 50px;
+}
+.o_izq_inner {
+    left: 5px;
+}
+
+.o_der_inner {
+    right: 5px;
+}
+
+.face {
+    background-color: var(--blanco);
+    width: 100%;
+    position: absolute;
+    height: 80px;
+    top: 30px;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.bunny_ojo {
+    position: absolute;
+    background-color: var(--dark);
+    border-radius: 10px;
+    width: 5px;
+    height: 5px;
+    top: 20px;
+    z-index: 4;
+    animation-name: blink-p;
+    animation-duration: 750ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink-p {
+    0% {
+        height: 2px;
+    }
+    5% {
+        transform: translate(0px, 1px);
+        height: .5px;
+    }
+    10% {
+        transform: translate(0px, 0px);
+        height: 2px;
+    }
+}
+.ojo_izq {
+    left: 28px;
+}
+
+.ojo_der {
+    right: 28px;
+}
+
+input {
+    appearance: none;
+    cursor: pointer;
+    height: 70px;
+    margin: 0;
+    position: relative;
+    width: 80px;
+    z-index: 2;
+}
+
+.score::after {
+    content: counter(score);
+}
+
+input:checked {
+    counter-increment: score 1;
+
+}
+
+.montaña {
+    position: absolute;
+    background-color: var(--green);
+    bottom: 0;
+    border-radius: 20px;
+    background-color: var(--brown);
+    opacity: 1;
+    background-image:  linear-gradient(135deg, var(--green) 25%, transparent 25%), 
+    linear-gradient(225deg, var(--green) 25%, transparent 25%), 
+    linear-gradient(45deg, var(--brown) 25%, transparent 25%),
+    linear-gradient(315deg, var(--brown) 25%, var(--green) 25%);
+    background-position:  29px 0, 29px 0, 0 0, 0 0;
+    background-size: 58px 58px;
+    background-repeat: repeat-x;
+    box-shadow: 0 19px 38px rgb(0, 0, 0,0.30), 
+    0 15px 12px rgb(0, 0, 0,0.22); 
+}
+.m_pri {
+    left: 35px;
+    width: 300px;
+    height: 420px;
+    z-index: 3;
+}
+
+.m_seg {
+    left: 0;
+    width: 250px;
+    height: 320px;
+    z-index: 5;
+}
+
+.m_ter {
+    right: 0;
+    width: 250px;
+    height: 180px;
+    z-index: 7;
+}
+
+.arbusto {
+    position: absolute;
+    background-color: var(--green);
+    width: 150px;
+    height: 100px;
+    bottom: 0;
+    box-shadow: 0 19px 38px rgb(0, 0, 0,0.30), 
+    0 15px 12px rgb(0, 0, 0,0.22); ;
+}
+
+.a_pri {
+    z-index: 8;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 20px;
+}
+.a_seg {
+    right: 0;
+    z-index: 9;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 20px;
+}
+
