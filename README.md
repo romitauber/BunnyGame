@@ -22,7 +22,7 @@ Animación en CSS3 y propiedad counter
 
 ### Links
 
-- Live Site URL: [https://bunnygame.netlify.com]
+- Live Site URL: [https://bunnygamemdp.netlify.app]
 
 ## My process
 
