@@ -18,7 +18,7 @@ Animación en CSS3 y propiedad counter
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./Screenshot.png)
 
 ### Links
 
